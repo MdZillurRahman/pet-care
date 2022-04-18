@@ -13,6 +13,7 @@ const Course = ({ course }) => {
             <div className="card pb-3 text-center" style={{ width: "18rem" }}>
                 <img src={img} className="card-img-top W-100" alt="" />
                 <div className="card-body">
+                    <p>{name}</p>
                 <p>Course Fee: {price}</p>
             <p><small>{description}</small></p>
             <button onClick={() => navigateToCourseDetail(id)} className='btn btn-primary'>Enroll Now</button>                </div>

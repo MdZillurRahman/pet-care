@@ -34,7 +34,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption className='text-primary'>
-                    <h3>Graphics Design</h3>
+                    <h1>Graphics Design</h1>
                     <p>You can do any design over your imagination.</p>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -47,7 +47,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption className='text-primary'>
-                    <h3>Apps Development</h3>
+                    <h1>Apps Development</h1>
                     <p>Build Your Own Application.</p>
                 </Carousel.Caption>
             </Carousel.Item>

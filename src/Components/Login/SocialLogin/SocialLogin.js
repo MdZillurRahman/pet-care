@@ -45,7 +45,7 @@ const SocialLogin = () => {
             {errorElement}
             <div className='d-flex align-items-center'>
                 <div style={{ height: '1px' }} className='bg-primary w-50'></div>
-                <p className='mt-2 px-4'>or</p>
+                <h3 className=' px-4'>or</h3>
                 <div style={{ height: '1px' }} className='bg-primary w-50'></div>
             </div>
         </div>

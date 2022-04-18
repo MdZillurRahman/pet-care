@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Logo from '../../../Images/icon-register.png'
 
 const Register = () => {
     const [agree, setAgree] = useState(false);
@@ -19,7 +20,7 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification : true});
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const navigate = useNavigate();
 
     const handleRegister = async (event) => {
@@ -31,7 +32,7 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password);
     }
 
-    if(loading){
+    if (loading) {
         return <Loading></Loading>;
     }
 
@@ -44,37 +45,40 @@ const Register = () => {
     }
 
     return (
-        <div className='container w-50 mx-auto'>
-            <h2 className='text-primary text-center mt-2'>Please Register</h2>
-            <SocialLogin></SocialLogin>
-            <Form className='w-75 mx-auto' onSubmit={handleRegister}>
-                <Form.Group className="mb-3">
-                    <Form.Label>Your Name</Form.Label>
-                    <Form.Control ref={nameRef} type="text" placeholder="Your Name" />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                    <Form.Label>Phone Number</Form.Label>
-                    <Form.Control ref={phoneNumberRef} type="text" placeholder="Phone Number" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" placeholder="Email" required />
-                </Form.Group>
+        <div className='bg-info'>
+            <div className='container w-50 mx-auto bg-white p-3'>
+                <img className='w-25 my-5 d-block mx-auto my-auto' src={Logo} alt="" />
+                <h2 className='text-primary text-center mt-2'>Please Register</h2>
+                <SocialLogin></SocialLogin>
+                <Form className='w-75 mx-auto' onSubmit={handleRegister}>
+                    <Form.Group className="mb-3">
+                        <Form.Label>Your Name</Form.Label>
+                        <Form.Control ref={nameRef} type="text" placeholder="Your Name" />
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                        <Form.Label>Phone Number</Form.Label>
+                        <Form.Control ref={phoneNumberRef} type="text" placeholder="Phone Number" />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control ref={emailRef} type="email" placeholder="Email" required />
+                    </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check onClick={()=>setAgree(!agree)} type="checkbox" label="Terms And Condition"/>
-                </Form.Group>
-                <Button disabled={!agree} variant="primary" type="submit" className='w-50 mx-auto my-4 d-block align-center'>
-                    Register
-                </Button>
-                <p>Already Have an Account? <Link to={"/login"} className='text-danger pe-auto text-decoration-none' onClick={navigateToLogIn}>Please LogIn</Link></p>
-            </Form>
-            
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check onClick={() => setAgree(!agree)} type="checkbox" label="Terms And Condition" />
+                    </Form.Group>
+                    <Button disabled={!agree} variant="primary" type="submit" className='w-50 mx-auto my-4 d-block align-center'>
+                        Register
+                    </Button>
+                    <p>Already Have an Account? <Link to={"/login"} className='text-danger pe-auto text-decoration-none' onClick={navigateToLogIn}>Please LogIn</Link></p>
+                </Form>
+            </div>
         </div>
+
     );
 };
 

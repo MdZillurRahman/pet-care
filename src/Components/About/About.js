@@ -1,22 +1,20 @@
-import { Button } from 'bootstrap';
 import React from 'react';
-import { Card } from 'react-bootstrap';
 import ProPic from './../../Images/ProfilePic.png'
+import './About.css';
 
 const About = () => {
     return (
-        <div className=''>
-            <Card style={{ width: '25rem'}}>
-                <Card.Img variant="top" src={ProPic} />
-                <Card.Body>
-                    <Card.Title><h2>Name: Md. Zillur Rahman</h2></Card.Title>
-                    <Card.Text>
-                        <h5>Designation: Physics(Hons.), University Of Dhaka.</h5>
-                        <p>Description: I am a Physics enthusiast. And I like to teach students. It is my duty to help them to achieve their dream goal.</p>
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </div>
+        <div className='about'>
+            <div className='circular'>
+                <img src={ProPic} alt="" />
+            </div>
+            <div className='justify'>
+                <h2>Md. Zillur Rahman</h2>
+                <h5>I like animal. I do think they are the loyal friedns of Human.
+                I like animal. I do think they are the loyal friedns of Human.I like animal. I do think they are the loyal friedns of Human.I like animal. I do think they are the loyal friedns of Human.I like animal. I do think they are the loyal friedns of Human.
+                </h5>
+            </div>
+        </div >
     );
 };
 

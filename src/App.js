@@ -7,9 +7,9 @@ import Footer from './Components/Shared/Footer/Footer';
 import NotFound from './Components/Shared/NotFound/NotFound';
 import Login from './Components/Login/Login/Login';
 import Register from './Components/Login/Register/Register';
-// import CourseDetail from './Components/CourseDetail/CourseDetail';
-// import RequireAuth from './Components/Login/RequireAuth/RequireAuth';
-// import Checkout from './Components/Checkout/Checkout/Checkout';
+import CourseDetail from './Components/CourseDetail/CourseDetail';
+import RequireAuth from './Components/Login/RequireAuth/RequireAuth';
+import Checkout from './Components/Checkout/Checkout/Checkout';
 
 
 
@@ -20,15 +20,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-        {/* <Route path='/course/:courseId' element={<CourseDetail></CourseDetail>}></Route> */}
+        <Route path='/course/:courseId' element={<CourseDetail></CourseDetail>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
-        {/* <Route path="/checkout" element={
+        <Route path="/checkout" element={
           <RequireAuth>
             <Checkout></Checkout>
           </RequireAuth>
-        }></Route> */}
+        }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

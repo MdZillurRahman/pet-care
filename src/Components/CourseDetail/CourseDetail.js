@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-const ServiceDetail = () => {
-    const { serviceId } = useParams();
+const CourseDetail = () => {
+    const { courseId } = useParams();
     return (
         <div>
-            <h2>Welcome to detail: {serviceId}</h2>
+            <h2>Welcome to detail: {courseId}</h2>
             <div className='text-center'>
                 <Link to="/checkout">
                     <button className='btn btn-primary'>Proceed Checkout</button>
@@ -15,4 +15,4 @@ const ServiceDetail = () => {
     );
 };
 
-export default ServiceDetail;
+export default CourseDetail;

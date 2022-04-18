@@ -20,8 +20,8 @@ const Banner = () => {
                     height = {600}
                     alt="First slide"
                 />
-                <Carousel.Caption>
-                    <h3>Web Design</h3>
+                <Carousel.Caption className='text-info'>
+                    <h1>Web Design</h1>
                     <p>Learn and Become a Junior Web Developer.</p>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -33,7 +33,7 @@ const Banner = () => {
                     alt="Second slide"
                 />
 
-                <Carousel.Caption>
+                <Carousel.Caption className='text-primary'>
                     <h3>Graphics Design</h3>
                     <p>You can do any design over your imagination.</p>
                 </Carousel.Caption>
@@ -46,7 +46,7 @@ const Banner = () => {
                     alt="Third slide"
                 />
 
-                <Carousel.Caption>
+                <Carousel.Caption className='text-primary'>
                     <h3>Apps Development</h3>
                     <p>Build Your Own Application.</p>
                 </Carousel.Caption>

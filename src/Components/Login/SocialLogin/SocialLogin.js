@@ -28,12 +28,6 @@ const SocialLogin = () => {
 
     return (
         <div>
-            <div className='d-flex align-items-center'>
-                <div style={{ height: '1px' }} className='bg-primary w-50'></div>
-                <p className='mt-2 px-4'>or</p>
-                <div style={{ height: '1px' }} className='bg-primary w-50'></div>
-            </div>
-            {errorElement}
             <div className='d-flex'>
             <button onClick={() => signInWithGoogle()}
                     className='btn btn-info d-block my-2 w-25'>
@@ -47,6 +41,12 @@ const SocialLogin = () => {
                     className='btn btn-info d-block my-2 w-25'>
                     <img style={{ width: '30px' }} src={github} alt="" />
                 </button>
+            </div>
+            {errorElement}
+            <div className='d-flex align-items-center'>
+                <div style={{ height: '1px' }} className='bg-primary w-50'></div>
+                <p className='mt-2 px-4'>or</p>
+                <div style={{ height: '1px' }} className='bg-primary w-50'></div>
             </div>
         </div>
     );

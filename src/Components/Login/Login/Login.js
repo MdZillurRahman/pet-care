@@ -19,7 +19,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    let from = location.state.from.pathname || "/";
+    // let from = location.state.from.pathname || "/";
     let errorElement;
 
     const handleLogIn = event => {
@@ -51,6 +51,7 @@ const Login = () => {
     return (
         <div className='container w-50 mx-auto'>
             <h2 className='text-primary text-center mt-2'>Please Login</h2>
+            <SocialLogin></SocialLogin>
             <Form className='w-75 mx-auto' onSubmit={handleLogIn}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -61,14 +62,13 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Button variant="primary" type="submit" className='w-50 mx-auto mt-2 d-block align-center'>
+                <Button variant="primary" type="submit" className='w-50 mx-auto my-4 d-block align-center'>
                     Log In
                 </Button>
                 {errorElement}
                 <p>New Here? <Link to={"/register"} className='text-danger pe-auto text-decoration-none mt-2' onClick={navigateToRegister}>Please Register</Link></p>
-                <p>Forget Password? <Link to={"/register"} className='text-danger pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</Link></p>
+                <p>Forget Password? <button className='btn btn-link text-danger pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             </Form>
-            <SocialLogin></SocialLogin>
         </div>
     );
 };

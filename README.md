@@ -1,6 +1,6 @@
 # Pet Care
 
- [Live Hosting Link](https://pet-carebyzillur.netlify.app/home)
+ [Live Hosting Link](https://pet-carebyzillur.netlify.app)
 
 * React Router Dom is used for dynamic routing.
 * Firebase and React Firebase Hooks is used for authentication.

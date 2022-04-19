@@ -1,18 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
 const AppointTime = () => {
+    const [time, setTime] = useState('');
+
     function randomDate(start, end) {
-        const randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-        console.log(randomDate);
+        const randomDate12 = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
     }
-
-
-    return (
-        <div>
-            <Button onClick={randomDate(new Date(2012, 0, 1), new Date())}>Get A Appointment Time</Button>
-        </div>
-    );
+    randomDate(new Date(2022, 4, 15), new Date());
 };
 
 export default AppointTime;

@@ -1,44 +1,44 @@
 [
     {
         "id": 1,
-        "name": "Front End Developer",
+        "name": "Dog's Day Care",
         "serviceFee": "350",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "../src/Images/Courses/How-to-Become-a-Front-End-Developer-in-2020.png"
+        "description": "Almost Everyone Loves Dog. But it is not easy to go on vacation having a dog. So We are here to support you.",
+        "img": "../Images/dogs.jpg"
     },
     {
         "id": 2,
-        "name": "Back End Developer",
+        "name": "Cat's Day Care",
         "serviceFee": "170",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "../src/Images"
+        "description": "Almost Everyone Loves Cat. But it is not easy to go on vacation having a cat. So We are here to support you.",
+        "img": "../Images/cat.png"
     },
     {
         "id": 3,
-        "name": "App Developer",
-        "serviceFee": "250",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+        "name": "Tiger Day Care",
+        "serviceFee": "550",
+        "description": "It is not an easy job to handle a tiger. But We are here to support you and guide you about Tiger's care.",
+        "img": "../Images/TIger.jpg"
     },
     {
         "id": 4,
-        "name": "Graphics Designer",
+        "name": "Tortoise Day Care",
         "serviceFee": "180",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
+        "description": "It is not an easy job to handle a tortoise. But We are here to support you and guide you about tortoise care.",
+        "img": "../Images/baby-tortouis.png"
     },
     {
         "id": 5,
-        "name": "Freelancer",
+        "name": "Eagle Day Care",
         "serviceFee": "190",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+        "description": "Eagle is hard to maintain. You will get support and guide to take care of an Eagle.",
+        "img": "../Images/eagle.png"
     },
     {
         "id": 6,
-        "name": "Game Developer",
+        "name": "Bird's Day Care",
         "serviceFee": "330",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
+        "description": "Everyone loves Bird. They are so cute. To get a proper guideline route contact with us.",
+        "img": "../Images/earlyBird.png"
     }
 ]

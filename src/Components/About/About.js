@@ -10,8 +10,8 @@ const About = () => {
             </div>
             <div className='justify'>
                 <h2>Md. Zillur Rahman</h2>
-                <h5>I like animal. I do think they are the loyal friedns of Human.
-                I like animal. I do think they are the loyal friedns of Human.I like animal. I do think they are the loyal friedns of Human.I like animal. I do think they are the loyal friedns of Human.I like animal. I do think they are the loyal friedns of Human.
+                <h5>I like animal. I do think they are the loyal friends of Human.
+                I like animal. I do think they are the loyal friends of Human.I like animal. I do think they are the loyal friedns of Human.I like animal. I do think they are the loyal friedns of Human.I like animal. I do think they are the loyal friedns of Human.
                 </h5>
             </div>
         </div >

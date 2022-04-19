@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Logo from '../../../Images/logIn.png';
+import './Login.css';
 
 
 const Login = () => {
@@ -21,7 +22,8 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    // let from = location.state.from.pathname || "/";
+    // let from = location.state?.from?.pathname || "/";
+
     let errorElement;
 
     const handleLogIn = event => {
@@ -51,10 +53,10 @@ const Login = () => {
     }
 
     return (
-        <div className='bg-info'>
-            <div className='container w-50 mx-auto bg-white p-4'>
-                <img className='w-25 my-5 d-block mx-auto' src={Logo} alt="" />
-                <h2 className='text-black text-center mt-2 h1'>Login</h2>
+        <div className='bg-info p-5 '>
+            <div className='container rounded mx-auto responsive'>
+                <img className='w-25 my-3 d-block mx-auto' src={Logo} alt="" />
+                <h2 className='text-dark text-center h1 mb-5'>Login</h2>
                 <SocialLogin></SocialLogin>
                 <Form className='w-75 mx-auto' onSubmit={handleLogIn}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -66,7 +68,7 @@ const Login = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                     </Form.Group>
-                    <p><button className='btn btn-link text-danger pe-auto text-decoration-none me-1 mx-auto d-block align-center' onClick={resetPassword}>Forget Password? </button></p>
+                    <p><button className='btn btn-link text-danger pe-auto text-decoration-none me-1 mx-auto d-block' onClick={resetPassword}>Forget Password? </button></p>
                     <Button variant="primary" type="submit" className='w-50 mx-auto my-4 d-block align-center'>
                         Log In
                     </Button>

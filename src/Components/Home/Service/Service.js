@@ -5,8 +5,8 @@ const Service = ({ service }) => {
     const { id, name, img, description, serviceFee } = service;
     const navigate = useNavigate();
 
-    const navigateToServiceDetail = id => {
-        navigate(`/service/${id}`);
+    const navigateToCheckout = id => {
+        navigate(`/checkout`);
     }
     return (
         <div className='g-5 col-sm-12 col-md-6 col-lg-4'>
@@ -14,9 +14,9 @@ const Service = ({ service }) => {
                 <img src={img} className="card-img-top W-100" alt="" />
                 <div className="card-body">
                     <h4>{name}</h4>
-                <p>Service Fee: ${serviceFee}</p>
-            <p><small>{description}</small></p>
-            <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary'>Enroll Now</button>                </div>
+                    <p>Service Fee: ${serviceFee}</p>
+                    <p><small>{description}</small></p>
+                    <button onClick={() => navigateToCheckout(id)} className='btn btn-primary'>Book Now</button>                </div>
             </div>
         </div>
     );

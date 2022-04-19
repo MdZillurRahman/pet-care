@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "name": "Sam",
+        "description": "Sam is 2 years old. And I can not carry him along with me everywhere. Pet care helps me a lot in this matter.",
+        "img": "../Images/dogLover.png"
+    },
+    {
+        "id": 2,
+        "name": "Meow",
+        "description": "Meow is 1.5 years old. And I can not carry him along with me everywhere. Pet care helps me a lot in this matter.",
+        "img": "../Images/Cat-Lover.png"
+    },
+    {
+        "id": 3,
+        "name": "Sita",
+        "description": "Sita is 1 years old. And I can not carry him along with me everywhere. Pet care helps me a lot in this matter.",
+        "img": "../Images/birdLover.jpg"
+    }]

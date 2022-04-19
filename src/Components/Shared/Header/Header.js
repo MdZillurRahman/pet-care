@@ -4,9 +4,9 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import logo from '../../../Images/icon.jpg'
+import logo from '../../../Images/icon.jpg';
 import Profile from '../Profile/Profile';
-import AppointTime from '../Appointment Time/AppointTime';
+import UserIcon from '../../../Images/user-icon.png';
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -21,17 +21,12 @@ const showProfile=() =>{
     return <Profile></Profile>;
 }
 
-const appointmentTime=() =>{
-    return <AppointTime></AppointTime>;
-}
-
-
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
-                        <img className='me-2' height={40} src={logo} alt="" />Career Hero
+                        <img className='me-2' height={40} src={logo} alt="" /> Pet Care
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -41,12 +36,11 @@ const appointmentTime=() =>{
                         </Nav>
                         <Nav>
                             <Nav.Link as={Link} to="about">About</Nav.Link>
-                            {
+                            { 
                                 user ?
-                                    <NavDropdown title="Link" id="navbarScrollingDropdown">
+                                    <NavDropdown title={<img src={UserIcon} style={{ width: '30px' }} alt="" />} id="navbarScrollingDropdown">
                                         <NavDropdown.Item href="profile" onClick={showProfile}>Profile
                                         </NavDropdown.Item>
-                                        <NavDropdown.Item href="appointmentTime" onClick={appointmentTime}>Appointment Time</NavDropdown.Item>
                                         <button className='btn btn-link text-black text-decoration-none' onClick={handleSignOut}>Sign Out</button>
                                     </NavDropdown>
                                     :

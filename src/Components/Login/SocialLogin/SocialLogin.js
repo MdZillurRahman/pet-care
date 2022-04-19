@@ -15,7 +15,7 @@ const SocialLogin = () => {
     let errorElement;
 
     if(googleLoading || gitHubLoading){
-        return <Loading></Loading>
+        return <Loading></Loading>;
     }
 
     if (googleError || gitHubError) {
@@ -31,15 +31,15 @@ const SocialLogin = () => {
             <div className='d-flex'>
             <button onClick={() => signInWithGoogle()}
                     className='btn btn-info d-block my-2 w-25'>
-                    <img style={{ width: '30px' }} src={google} alt="" />
+                    <img className='mx-auto' style={{ width: '30px' }} src={google} alt="" />
                 </button>
             <button
                     className='btn btn-info d-block mx-auto my-2 w-25'>
-                    <img style={{ width: '30px' }} src={facebook} alt="" />
+                    <img className='mx-auto' style={{ width: '30px' }} src={facebook} alt="" />
                 </button>
             <button onClick={() => signInWithGithub()}
                     className='btn btn-info d-block my-2 w-25'>
-                    <img style={{ width: '30px' }} src={github} alt="" />
+                    <img className='mx-auto' style={{ width: '30px' }} src={github} alt="" />
                 </button>
             </div>
             {errorElement}

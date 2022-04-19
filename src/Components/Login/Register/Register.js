@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
@@ -14,13 +14,13 @@ const Register = () => {
     const phoneNumberRef = useRef('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
-    const agreeRef = useRef('');
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate();
 
     const handleRegister = async (event) => {
@@ -28,8 +28,11 @@ const Register = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        const phoneNumber = phoneNumberRef.current.value;
+        const number = phoneNumberRef.current.value;
         await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name, photoURL: number});
+        console.log('Updated profile');
+        navigate('/home');
     }
 
     if (loading) {
@@ -47,7 +50,7 @@ const Register = () => {
     return (
         <div className='bg-info'>
             <div className='container w-50 mx-auto bg-white p-3'>
-                <img className='w-25 my-5 d-block mx-auto my-auto' src={Logo} alt="" />
+                <img className='w-25 my-5 d-block mx-auto' src={Logo} alt="" />
                 <h2 className='text-primary text-center mt-2'>Please Register</h2>
                 <SocialLogin></SocialLogin>
                 <Form className='w-75 mx-auto' onSubmit={handleRegister}>

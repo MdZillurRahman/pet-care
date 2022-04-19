@@ -1,17 +1,31 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import logo from '../../../Images/icon.jpg'
+import Profile from '../Profile/Profile';
+import AppointTime from '../Appointment Time/AppointTime';
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     const handleSignOut = () => {
         signOut(auth);
+        navigate('/login');
     }
+
+const showProfile=() =>{
+    return <Profile></Profile>;
+}
+
+const appointmentTime=() =>{
+    return <AppointTime></AppointTime>;
+}
+
+
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -30,8 +44,9 @@ const Header = () => {
                             {
                                 user ?
                                     <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                        <NavDropdown.Item href="#action3">Profile</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action4">Appointment Time</NavDropdown.Item>
+                                        <NavDropdown.Item href="profile" onClick={showProfile}>Profile
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item href="appointmentTime" onClick={appointmentTime}>Appointment Time</NavDropdown.Item>
                                         <button className='btn btn-link text-black text-decoration-none' onClick={handleSignOut}>Sign Out</button>
                                     </NavDropdown>
                                     :

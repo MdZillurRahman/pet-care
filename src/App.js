@@ -11,6 +11,8 @@ import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
 import RequireAuth from './Components/Login/RequireAuth/RequireAuth';
 import Checkout from './Components/Checkout/Checkout/Checkout';
 import Blogs from './Components/Home/Blogs/Blogs';
+import Profile from './Components/Shared/Profile/Profile';
+import AppointTime from './Components/Shared/Appointment Time/AppointTime';
 
 
 
@@ -31,6 +33,9 @@ function App() {
             <Checkout></Checkout>
           </RequireAuth>
         }></Route>
+
+        <Route path="/profile" element={<Profile></Profile>}></Route> 
+        <Route path="/appointmentTime" element={<AppointTime></AppointTime>}></Route> 
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

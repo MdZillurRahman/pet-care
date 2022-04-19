@@ -53,7 +53,7 @@ const Login = () => {
     return (
         <div className='bg-info'>
             <div className='container w-50 mx-auto bg-white p-4'>
-                <img className='w-25 my-5 d-block mx-auto my-auto' src={Logo} alt="" />
+                <img className='w-25 my-5 d-block mx-auto' src={Logo} alt="" />
                 <h2 className='text-black text-center mt-2 h1'>Login</h2>
                 <SocialLogin></SocialLogin>
                 <Form className='w-75 mx-auto' onSubmit={handleLogIn}>

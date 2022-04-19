@@ -52,12 +52,10 @@ const Blogs = () => {
                     <Accordion.Body>
                         <h5>Firebase provides below services other than authentication-</h5>
                         <ul>
-                            <li>Predictions</li>
                             <li>Cloud Firestore</li>
                             <li>Hosting</li>
                             <li>Cloud Storage</li>
                             <li>Cloud Messaging</li>
-                            <li>Kuzzle</li>
                             <li>Google Analytics</li>
                         </ul>
                     </Accordion.Body>

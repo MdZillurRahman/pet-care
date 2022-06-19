@@ -27,6 +27,7 @@ const Login = () => {
     const location = useLocation();
 
     // let from = location.state?.from?.pathname || "/";
+    console.log(location);
 
     let errorElement;
 
